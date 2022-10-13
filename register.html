@@ -1,18 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <div class="nav">
-        <a class="home" href="./index.html">Masai Vaccination</a>
-        <a href="./register.html">Register</a>
-        <a href="./dashboard.html">Dashboard</a>
-        <a href="./vaccinated.html">Vaccinated</a>
-      </div>
-</body>
+      <a class="home" href="./index.html">Masai Vaccination</a>
+      <a href="./register.html">Register</a>
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./vaccinated.html">Vaccinated</a>
+    </div>
+
+    <div class="register">
+        <form id="regForm" style="display: flex;" onsubmit="Register(event)">
+            <div>
+                <!-------head---- -->
+              <p class="custLogin" style="color: #2399d6; margin:0px; margin-bottom: 20px; font-size: 16px;">Fill the form here.......</p>
+              <p>Unique Id : <span id="unique" style="color:rgb(235, 63, 11);"></span></p>
+              <br>
+              <!-- ----------name-------- -->
+              <span>First Name <span style="color: rgb(235, 63, 11)">*</span></span>
+              <input type="text" id="name" required/>
+              <span style="color:rgb(235, 63, 11) ;" id="name_length"></span>
+              <br /><br/>
+              <!-- ------------age----------------    -->
+              <span>Age <span style="color: rgb(235, 63, 11)">*</span></span>
+              <input type="number" id="age" autocomplete="off" required />
+              <span style="color:rgb(235, 63, 11) ;" id="age_limit"></span>
+              <br/><br/>
+              <!-- --------------designation---------- -->
+              <span>Designation <span style="color: rgb(235, 63, 11)">*</span></span>
+              <input type="radio" id="employee" autocomplete="off" required/><span>Employee</span> <input type="radio" id="student" autocomplete="off" required><span>Student</span>
+              <br /><br/>
+              <!-- --------------priority-------------- -->
+              <span>Priority <span style="color: rgb(235, 63, 11)">*</span></span>
+              <input type="radio" id="P1" autocomplete="off" required/><span>P1</span>
+              <input type="radio" id="P2" autocomplete="off" required><span>P2</span>
+              <input type="radio" id="P3" autocomplete="off" required><span>P3</span>
+              <input type="radio" id="P4" autocomplete="off" required><span>P4</span>
+              <br/><br>
+              <!-- ---------------vaccine---------------- -->
+              <span>Vaccine <span style="color: rgb(235, 63, 11)">*</span></span>
+              <select name="" id="vaccine">
+                <option value="">select vaccine</option>
+                <option value="covishield">Covishield</option>
+                <option value="covaxin ">Covaxin</option>
+                <option value="sputnik">Sputnik</option>
+              </select>
+              <br/><br>
+              <!-- ------------submit------------------ -->
+              <input id="submit" class="btnsub"  type="submit"></input>
+            </div>
+        </form>
+    </div>
+  </body>
 </html>
+<script>
+
+    var x = Math.floor(Math.random() * (9999999999 - 1000000000) ) + 1000000000;
+    document.getElementById("unique").innerHTML = x;
+
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    // var designation = 
+</script>
