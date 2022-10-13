@@ -1,7 +1,44 @@
 body{
     margin: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.main{
+    height: 550px;
+    background-image: url("./images/patient-consulting-with-a-medical-professional.png");
+
 }
 
 .nav {
-    background-color: grey;
+    background-color: rgb(225, 218, 218);
+    border: 1px solid transparent;
+    height: 25px;
+    padding: 10px;  
+}
+a{
+    margin-right: 50px;
+    margin-left: 50px;
+    text-decoration: none;
+    color: rgb(132, 126, 126);
+    font-weight: bolder;
+}
+
+.home{
+    margin-right: 400px;
+    color: rgb(154, 96, 208);
+    font-size: 21px;
+}
+.home:hover{
+    color: rgb(132, 126, 126);
+    
+}
+
+a:hover{
+    color: rgb(154, 96, 208);
+}
+
+h1{
+    color: rgb(111, 108, 108);
+    text-align: center;
+    font-size: xxx-large;
 }
